@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../pages/Home.vue'
-import Articles from '../pages/Articles.vue'
-import About from '../pages/About.vue'
 
-import Insharior from '../pages/portfolio/Insharior.vue'
-import IGTracker from '../pages/portfolio/IGTracker.vue'
-import AWeather from '../pages/portfolio/AWeather.vue'
+import Portfolio from '../pages/Portfolio'
+import Articles from '../pages/Articles'
+import About from '../pages/About'
+
+import Insharior from '../pages/portfolio/Insharior'
+import IGTracker from '../pages/portfolio/IGTracker'
+import AWeather from '../pages/portfolio/AWeather'
 
 Vue.use(VueRouter)
 
@@ -15,7 +16,7 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      component: Home
+      component: Portfolio
     },
     {
       path: '/articles',

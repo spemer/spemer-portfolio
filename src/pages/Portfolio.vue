@@ -1,5 +1,5 @@
 <template lang="pug">
-  div#Portfolio
+  div#portfolio-div
     router-link.portfolio--grid(
       v-for="(value, key) in portfolioList"
       :key="key"
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'Portfolio',
+  name: 'portfolio',
   data () {
     return {
       portfolioList: {
@@ -31,7 +31,7 @@ export default {
 <style lang="scss">
 @import '../style/style.scss';
 
-#Portfolio {
+#portfolio-div {
   display: grid;
   grid-gap: $grid8x;
   grid-template-columns: 1fr 1fr 1fr;
