@@ -1,10 +1,10 @@
 <template lang="pug">
-  div#portfolio-div
-    router-link.portfolio--grid(
+  div#portfolio__div
+    router-link.portfolio__grid(
       v-for="(value, key) in portfolioList"
       :key="key"
       :to="'/portfolio' + value[0]")
-      img.portfolio--img(:src="value[1]")
+      img.portfolio__img(:src="value[1]")
 </template>
 
 <script>
@@ -31,7 +31,7 @@ export default {
 <style lang="scss">
 @import '../style/style.scss';
 
-#portfolio-div {
+#portfolio__div {
   display: grid;
   grid-gap: $grid8x;
   grid-template-columns: 1fr 1fr 1fr;
@@ -41,7 +41,7 @@ export default {
     grid-template-columns: 1fr 1fr;
   }
 
-  .portfolio--img {
+  .portfolio__img {
     width: 100%;
     object-fit: cover;
     border-radius: $grid2x;

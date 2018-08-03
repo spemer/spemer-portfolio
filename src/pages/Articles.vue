@@ -1,10 +1,10 @@
 <template lang="pug">
-  div#articles-div
-    router-link.articles--grid(
+  div#articles__div
+    router-link.articles__grid(
       v-for="(value, key) in articlesList"
       :key="key"
       :to="'/articles' + value[0]")
-      img.articles--img(:src="value[1]")
+      img.articles__img(:src="value[1]")
 </template>
 
 <script>
@@ -31,7 +31,7 @@ export default {
 <style lang="scss">
 @import '../style/style.scss';
 
-#articles-div {
+#articles__div {
   display: grid;
   grid-gap: $grid8x;
   grid-template-columns: 1fr 1fr 1fr;
@@ -41,7 +41,7 @@ export default {
     grid-template-columns: 1fr 1fr;
   }
 
-  .articles--img {
+  .articles__img {
     width: 100%;
     object-fit: cover;
     border-radius: $grid2x;

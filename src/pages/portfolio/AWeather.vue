@@ -1,11 +1,11 @@
 <template lang="pug">
-  div#AWeather
+  div#page--aweather
     | AWeather
 </template>
 
 <script>
 export default {
-  name: 'AWeather'
+  name: 'aweather'
 }
 </script>
 

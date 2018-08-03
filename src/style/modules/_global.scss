@@ -7,6 +7,12 @@
   -webkit-font-family: 'Merriweather', serif;
 }
 
+@mixin font-stack-title() {
+  font-family: 'Roboto Slab', serif;
+  -moz-font-family: 'Roboto Slab', serif;
+  -webkit-font-family: 'Roboto Slab', serif;
+}
+
 
 /* ==============================
   text rendering
@@ -64,6 +70,7 @@ a {
 
 h1 {
   font-weight: 900;
+  @include font-stack-title();
   @include font-size($grid8x);
   @include line-height($grid4x);
 }
@@ -76,7 +83,7 @@ h3 {
 
 p {
   @include font-size($grid4x);
-  @include line-height($grid4x);
+  @include line-height($grid5x);
 
   b {
       font-weight: 900;

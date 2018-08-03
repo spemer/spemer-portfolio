@@ -81,8 +81,8 @@ export default {
 
 #Footer {
   padding: $grid8x 0;
-  margin-top: $grid8x;
-  border-top: 1px solid $textccc;
+  margin-top: $grid16x;
+  border-top: 2px solid $texteee;
 
 
   .footer--text,

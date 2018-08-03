@@ -1,11 +1,11 @@
 <template lang="pug">
-  div#Insharior
+  div#page--nsharior
     | Insharior
 </template>
 
 <script>
 export default {
-  name: 'Insharior'
+  name: 'insharior'
 }
 </script>
 

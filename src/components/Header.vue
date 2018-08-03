@@ -1,7 +1,7 @@
 <template lang="pug">
   div#Header
     div.header__logo
-      router-link.text--title(to="/") Hyouk Seo
+      router-link.header__text--title(to="/") Hyouk Seo
     div.header__link
       router-link(
         v-for="(value, key) in linkList"
@@ -29,8 +29,8 @@ export default {
 
 #Header {
   padding: $grid16x 0;
-  margin-bottom: $grid8x;
-  border-bottom: 1px solid $textccc;
+  margin-bottom: $grid16x;
+  border-bottom: 2px solid $texteee;
 
   @media #{$middle} {
     text-align: center;
@@ -42,7 +42,7 @@ export default {
   .header__link {
     display: inline-block;
 
-    .text--title {
+    .header__text--title {
       font-family: 'Roboto Slab', sans-serif;
       font-weight: 900;
     }
