@@ -20,12 +20,4 @@ export default {
 
 <style lang="scss">
 @import './style/style.scss';
-
-#app {
-
-  .text--title {
-    font-family: 'Roboto Slab', sans-serif;
-    font-weight: 900;
-  }
-}
 </style>

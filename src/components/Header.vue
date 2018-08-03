@@ -42,6 +42,11 @@ export default {
   .header__link {
     display: inline-block;
 
+    .text--title {
+      font-family: 'Roboto Slab', sans-serif;
+      font-weight: 900;
+    }
+
     a {
       color: $text555;
       font-weight: 900;
