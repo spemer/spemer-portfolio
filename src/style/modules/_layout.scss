@@ -1,0 +1,27 @@
+html {
+  width: 960px;
+  margin: 0 auto;
+
+  @media #{$default} {
+    width: calc(100% - #{$grid32x});
+    padding: 0 $grid16x;
+  }
+
+  @media #{$tablet} {
+    width: calc(100% - #{$grid16x});
+    padding: 0 $grid8x;
+  }
+
+  @media #{$landsc} {
+    padding: 0 $grid8x;
+  }
+
+  @media #{$pablet} {
+    width: calc(100% - #{$grid8x});
+    padding: 0 $grid4x;
+  }
+
+  @media #{$mobile} {
+    padding: 0 $grid4x;
+  }
+}

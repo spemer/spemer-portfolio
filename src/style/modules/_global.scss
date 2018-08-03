@@ -1,0 +1,84 @@
+/* ==============================
+  mixin default font
+============================== */
+@mixin font-stack-html() {
+  font-family: 'Merriweather', serif;
+  -moz-font-family: 'Merriweather', serif;
+  -webkit-font-family: 'Merriweather', serif;
+}
+
+
+/* ==============================
+  text rendering
+============================== */
+@mixin font-settings() {
+  direction: ltr;
+          font-feature-settings: 'liga';
+     -moz-font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale !important;
+   -webkit-font-smoothing: antialiased !important;
+          text-rendering:  optimizeLegibility !important;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip: ink;
+}
+
+
+/* ==============================
+  default font-size, line-height
+============================== */
+@function calculateRem($size) {
+  $remSize: $size / $grid4x;
+  @return $remSize * 1rem;
+}
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+@mixin line-height($size) {
+  line-height: $size * 1.6;
+  line-height: calculateRem($size) * 1.6;
+}
+
+
+/* ==============================
+  normalize css
+============================== */
+body {
+  outline: none;
+  color: $text555;
+  @include font-settings();
+  @include font-stack-html();
+  @include font-size($grid4x);
+  @include line-height($grid4x);
+}
+
+
+/* ==============================
+    fonts
+============================== */
+a {
+  color: $text555;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 900;
+  @include font-size($grid8x);
+  @include line-height($grid4x);
+}
+
+h3 {
+  font-weight: 900;
+  @include font-size($grid6x);
+  @include line-height($grid8x);
+}
+
+p {
+  @include font-size($grid4x);
+  @include line-height($grid4x);
+
+  b {
+      font-weight: 900;
+  }
+}
