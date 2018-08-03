@@ -11,7 +11,7 @@ import AWeather from '../pages/portfolio/AWeather'
 
 Vue.use(VueRouter)
 
-const router = new VueRouter({
+let router = new VueRouter({
   mode: 'history',
   routes: [
     {
