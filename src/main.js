@@ -3,18 +3,13 @@ import App from './App.vue'
 import router from './router'
 
 import firebase from 'firebase'
+import VueFire from 'vuefire'
 
-var config = {
-  apiKey: "AIzaSyAB0JuGXxMEGPqPbUXzXvtMUGYxHCP5rN8",
-  authDomain: "spemer-bad39.firebaseapp.com",
-  databaseURL: "https://spemer-bad39.firebaseio.com",
-  projectId: "spemer-bad39",
-  storageBucket: "spemer-bad39.appspot.com",
-  messagingSenderId: "966829305796"
-}
-firebase.initializeApp(config)
 
-let database = firebase.database()
+Vue.use(VueFire)
+
+
+
 
 new Vue({
   el: '#app',
