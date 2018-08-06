@@ -27,6 +27,10 @@ html {
   @media #{$pablet} {
     width: calc(100% - #{$grid8x});
     padding: 0 $grid4x;
+
+    .page__wrapper {
+      width: calc(100% - 32px);
+    }
   }
 
   @media #{$mobile} {

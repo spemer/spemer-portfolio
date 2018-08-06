@@ -83,7 +83,7 @@ h1 {
 h3 {
   font-weight: 900;
   @include font-size($grid6x);
-  @include line-height($grid8x);
+  @include line-height($grid6x);
 }
 
 p,

@@ -12,27 +12,40 @@
       margin-bottom: $grid16x;
     }
 
-      .page__title,
-      .section__title {
-        margin-bottom: -#{$grid4x};
-        @include font-stack-title();
-      }
+    .page__title,
+    .section__title {
+      margin-bottom: -#{$grid2x};
+      @include font-stack-title();
+    }
 
-      // .page__subtitle {
-      // }
+    // .page__subtitle {
+    // }
 
-      .section__title--small {
-        font-weight: 900;
-      }
+    .section__title--small {
+      font-weight: 900;
+      margin: $grid8x 0 -#{$grid3x};
+      @include font-size($grid5x);
+      @include font-stack-title();
+    }
 
-      .section__quote {
-        font-weight: 300;
-        margin: $grid16x 0;
-        text-align: center;
-        font-style: italic;
-        @include font-size($grid6x);
-        @include font-stack-quote();
-        @include line-height($grid6x);
+    .section__quote {
+      margin: $grid16x 0;
+      text-align: center;
+      font-style: italic;
+      @include font-size($grid6x);
+      @include font-stack-quote();
+      @include line-height($grid6x);
+    }
+
+    .section__image {
+      width: 100%;
+      display: block;
+      margin: $grid8x auto;
+      border-radius: $grid2x;
+
+      &.img--50 {
+        width: 50%;
       }
+    }
   }
 }
