@@ -13,6 +13,11 @@
   -webkit-font-family: 'Roboto Slab', serif;
 }
 
+@mixin font-stack-quote() {
+  font-family: 'Cambria', 'Times New Roman', 'Merriweather',serif;
+  -moz-font-family: 'Cambria', 'Times New Roman', 'Merriweather',serif;
+  -webkit-font-family: 'Cambria', 'Times New Roman', 'Merriweather',serif;
+}
 
 /* ==============================
   text rendering

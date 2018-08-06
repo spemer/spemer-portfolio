@@ -20,5 +20,19 @@
 
       // .page__subtitle {
       // }
+
+      .section__title--small {
+        font-weight: 900;
+      }
+
+      .section__quote {
+        font-weight: 300;
+        margin: $grid16x 0;
+        text-align: center;
+        font-style: italic;
+        @include font-size($grid6x);
+        @include font-stack-quote();
+        @include line-height($grid6x);
+      }
   }
 }
