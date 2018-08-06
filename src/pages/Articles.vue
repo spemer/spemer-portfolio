@@ -29,22 +29,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../style/style.scss';
 
-#articles__div {
-  display: grid;
-  grid-gap: $grid8x;
-  grid-template-columns: 1fr 1fr 1fr;
-  // grid-auto-rows: minmax(250px, auto);
-
-  @media #{$landsc} {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .articles__img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: $grid2x;
-  }
-}
 </style>

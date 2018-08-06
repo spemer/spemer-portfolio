@@ -15,6 +15,10 @@ let router = new VueRouter({
   mode: 'history',
   routes: [
     {
+      path: '*',
+      redirect: '/'
+    },
+    {
       path: '/',
       component: Portfolio
     },

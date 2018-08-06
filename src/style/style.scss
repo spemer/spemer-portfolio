@@ -11,3 +11,13 @@
   './modules/mqbp',
   './modules/global',
   './modules/layout';
+
+
+@import
+'./components/header',
+'./components/footer',
+'./components/main-layout';
+
+
+@import
+  './pages/page';
