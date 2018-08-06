@@ -10,10 +10,18 @@ html {
   @media #{$tablet} {
     width: calc(100% - #{$grid16x});
     padding: 0 $grid8x;
+
+    .page__wrapper {
+      width: 480px;
+    }
   }
 
   @media #{$landsc} {
     padding: 0 $grid8x;
+
+    .page__wrapper {
+      width: 360px;
+    }
   }
 
   @media #{$pablet} {

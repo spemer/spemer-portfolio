@@ -4,14 +4,21 @@
 
   .page__section {
 
+    &:not(:first-child) {
+      margin-top: $grid16x;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $grid16x;
+    }
+
       .page__title,
       .section__title {
         margin-bottom: -#{$grid4x};
         @include font-stack-title();
       }
 
-      .page__subtitle {
-
-      }
+      // .page__subtitle {
+      // }
   }
 }

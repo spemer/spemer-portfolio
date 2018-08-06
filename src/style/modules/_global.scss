@@ -81,7 +81,9 @@ h3 {
   @include line-height($grid8x);
 }
 
-p {
+p,
+li,
+span {
   @include font-size($grid4x);
   @include line-height($grid5x);
 
