@@ -5,7 +5,6 @@
       :key="key"
       :to="'/portfolio' + value[0]")
       img.portfolio__img(:src="value[1]")
-    //- router-view
 </template>
 
 <script>

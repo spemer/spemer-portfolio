@@ -1,0 +1,21 @@
+#scroll-top {
+
+  .btn--top {
+    border: none;
+    outline: none;
+    color: white;
+    right: $grid4x;
+    bottom: $grid4x;
+    cursor: pointer;
+    position: fixed;
+    width: $grid10x;
+    height: $grid10x;
+    border-radius: $grid10x;
+    background-color: $textccc;
+    transition: display .5s ease;
+
+    .fa {
+      margin-bottom: $grid;
+    }
+  }
+}
