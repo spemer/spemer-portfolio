@@ -16,10 +16,14 @@ let router = new VueRouter({
   routes: [
     {
       path: '*',
-      redirect: '/'
+      redirect: '/portfolio'
     },
     {
       path: '/',
+      redirect: '/portfolio'
+    },
+    {
+      path: '/portfolio',
       component: Portfolio
     },
     {

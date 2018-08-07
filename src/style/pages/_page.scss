@@ -45,6 +45,30 @@
 
       &.img--50 {
         width: 50%;
+
+        @media #{$tablet} {
+          width: 100%;
+        }
+      }
+
+      &.img--35 {
+        width: 35%;
+
+        @media #{$tablet} {
+          width: 100%;
+        }
+      }
+
+      &.img--75 {
+        width: 75%;
+
+        @media #{$tablet} {
+          width: 100%;
+        }
+      }
+
+      &.img--line {
+        border: 1px solid $texteee;
       }
     }
   }
