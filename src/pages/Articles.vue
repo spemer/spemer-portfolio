@@ -5,6 +5,10 @@
       :key="key"
       :to="'/articles' + value[0]")
       img.articles__img(:src="value[1]")
+
+    div#articles__nav(
+      v-if="hasLinkName"
+    ) hasLinkName
 </template>
 
 <script>

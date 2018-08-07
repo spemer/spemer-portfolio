@@ -1,10 +1,12 @@
 <template lang="pug">
   div#scroll-top
-    button.btn--top(
-      v-if="scrolled"
-      v-scroll-to="'body'"
-    )
-      i.fa.fa-chevron-up
+    transition(name="fade")
+      button.btn--top(
+        v-if="scrolled"
+        title="Back to top"
+        v-scroll-to="'body'"
+      )
+        i.fa.fa-chevron-up
 </template>
 
 <script>

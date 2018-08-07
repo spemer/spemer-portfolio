@@ -3,6 +3,7 @@
     router-link.portfolio__grid(
       v-for="(value, key) in portfolioList"
       :key="key"
+      :title="key"
       :to="'/portfolio' + value[0]")
       img.portfolio__img(:src="value[1]")
 </template>
