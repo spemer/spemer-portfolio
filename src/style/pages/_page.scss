@@ -43,6 +43,10 @@
       margin: $grid8x auto;
       border-radius: $grid2x;
 
+      &.no-radius {
+        border-radius: 0;
+      }
+
       &.img--50 {
         width: 50%;
 

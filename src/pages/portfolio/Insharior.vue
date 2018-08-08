@@ -6,8 +6,9 @@
           | Insharior: UX Case Study &amp; Design Process
         p.page__subtitle
           | Interior item sharing application
-        img.section__image(
-          src="/src/assets/insharior/1.png"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/1.png"
+          :images="['/src/assets/insharior/1.png']"
         )
 
       div.page__section
@@ -24,8 +25,9 @@
             li A sharp increase of young one-person households(early 20’s)— and their desire to decorate their own room with unique interior items getting higher day by day.
             li Increase of move due to one-person household’s economic conditions— which makes them hard to move their heavy furniture like bed or couch, or hard to collect interior items.
             li Increase of desire to self-interior between one-person households and economic weaker— even if they have to move their residence often.
-        img.section__image.img--50(
-          src="/src/assets/insharior/giphy.gif"
+        lightbox.section__image.img--50(
+          thumbnail="/src/assets/insharior/giphy.gif"
+          :images="['/src/assets/insharior/giphy.gif']"
         )
         p.section__paragraph Based on those problems above, our team decided to make an application that resolves the needs by providing a platform to share one’s interior items with trust at a low price — Insharior.
 
@@ -48,8 +50,9 @@
             li Provide augmented reality feature to place furniture in user's room in advance before they rent it
 
       div.page__section
-        img.section__image(
-          src="/src/assets/insharior/ppt.jpg"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/ppt.jpg"
+          :images="['/src/assets/insharior/ppt.jpg']"
         )
 
       div.page__section
@@ -69,16 +72,18 @@
             li Short-term living in their rented room(usually between 1 ~ 2 years)
             li Usually get information about interior from SNS or TV
             li Proper investment is available for their house interior
-        img.section__image.img--line(
-          src="/src/assets/insharior/tvshow.jpg"
+        lightbox.section__image.img--line(
+          thumbnail="/src/assets/insharior/tvshow.jpg"
+          :images="['/src/assets/insharior/tvshow.jpg']"
         )
 
         p.section__title--small
           | Persona
         p.section__paragraph
           | We created some persona to ascertain our concept and make our plans backed up by examples with other characters. Image below is an example of Insharior’s potential user. Watch more persona on Google Drive(in Korean) - Persona 1,2 | Persona 3
-        img.section__image.img--line(
-          src="/src/assets/insharior/persona.png"
+        lightbox.section__image.img--line(
+          thumbnail="/src/assets/insharior/persona.png"
+          :images="['/src/assets/insharior/persona.png']"
         )
 
         p.section__title--small
@@ -104,8 +109,9 @@
             li Make a profit with their unused interior items
             li Rent a unique interior items with low price from other users
             li Integrate with other SNS application to share their interior
-        img.section__image.img--75(
-          src="/src/assets/insharior/insharior_sns.png"
+        lightbox.section__image.img--75(
+          thumbnail="/src/assets/insharior/insharior_sns.png"
+          :images="['/src/assets/insharior/insharior_sns.png']"
         )
 
         p.section__title--small
@@ -124,27 +130,31 @@
             li When I move to a new empty rent house, I want to rent some interior items and furniture with low price, So I can save my money and have some nice interior items at the same time in my room.
             li When I have to move to other city or rent house in near future, I want to lend my heavy stuffs in my room like furniture, So I can make some money and I don’t need to throw it away.
             li When I moved to a new rent house, I want to see some other people’s way they decorated their house, So I can decorate my room better and share it with others.
-        img.section__image.img--75(
-          src="/src/assets/insharior/insharior_circle.png"
+        lightbox.section__image.img--75(
+          thumbnail="/src/assets/insharior/insharior_circle.png"
+          :images="['/src/assets/insharior/insharior_circle.png']"
         )
 
         p.section__title--small
           | Structure map
         p.section__paragraph
           | Based on the concepts, idea, and job stories above, we made this user flow before We get started, and to make sure our plans being successful and for the strong wireframe. And based on this user flow, I started to create a Lo-fi wireframes and prototypes below.
-        img.section__image(
-          src="/src/assets/insharior/userflow.png"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/userflow.png"
+          :images="['/src/assets/insharior/userflow.png']"
         )
 
         p.section__title--small
           | Product recommendation map
         p.section__paragraph
           | To show users appropriate products based on their taste is very important to increase sales and interaction on application. We collect user’s taste at the first time that user launches Insharior application(see the GIF image at #4. User’s Feedback and Pain Point #1), and from user’s saved product or Hashtag, search history, etc. Based on these personalized data, Insharior can show or recommend personalized products on user’s main screen or show them through our chat bot.
-        img.section__image(
-        src="/src/assets/insharior/insharior_recommendation_map.png"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/insharior_recommendation_map.png"
+          :images="['/src/assets/insharior/insharior_recommendation_map.png']"
         )
-        img.section__image(
-          src="/src/assets/insharior/insharior_buyer.png"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/insharior_buyer.png"
+          :images="['/src/assets/insharior/insharior_buyer.png']"
         )
 
       div.page__section
@@ -152,8 +162,9 @@
           | #3. Rapid Prototyping
         p.section__title--small
           | Lo-fi Hand Sketch
-        img.section__image(
-          src="/src/assets/insharior/wireframe_insharior.jpg"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/wireframe_insharior.jpg"
+          :images="['/src/assets/insharior/wireframe_insharior.jpg']"
         )
         p.section__paragraph
           | I need to prove our concepts and ideas, So I sketched some rough black & white hand sketch wireframes. Based on this sketch, we developed our interface design step by step. I’ll let you know how we did it.
@@ -162,8 +173,9 @@
           | Lo-Fi Wireframes
         p.section__paragraph
           | Before we get started with user-testing, We created some rough wireframes.
-        img.section__image(
-          src="/src/assets/insharior/wireframes.png"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/wireframes.png"
+          :images="['/src/assets/insharior/wireframes.png']"
         )
         p.section__paragraph
           | With these wireframes above, we had some user-tests with our college students and classmates, and collected some feedback and opinions to improve our application’s interface and experiences.
@@ -173,37 +185,43 @@
           | #4. User Feedback
         p.section__paragraph
           | We’ve created Hi-Fi prototypes based on the wireframes above(#3), also reflected tester’s opinions and feedback for better UX and to make sure our design supported by user’s feedback.
-        img.section__image(
-          src="/src/assets/insharior/taste.gif"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/taste.gif"
+          :images="['/src/assets/insharior/taste.gif']"
         )
 
         p.section__title--small
           | Pain Points & Improvements
         p.section__paragraph
           | We faced with some pain points during user testing. Some of them were critical for both users and Insharior application, And we re-designed them based on user’s feedback and our ideas. (Click image to enlarge)
-        img.section__image.img--75(
-          src="/src/assets/insharior/insharior_userflow.png"
+        lightbox.section__image.img--75(
+          thumbnail="/src/assets/insharior/insharior_userflow.png"
+          :images="['/src/assets/insharior/insharior_userflow.png']"
         )
 
         p.section__paragraph
           | Pain Point #1: On ‘Analyze user’s taste’ screen, it’s impossible to know how many steps are left to finish this process due to there’s no any indicator about step. Also user who wants to skip this process can’t skip this screen because there was no any ‘Skip’ or ‘Finish’ button.
-        img.section__image(
-          src="/src/assets/insharior/pp_1.png"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/pp_1.png"
+          :images="['/src/assets/insharior/pp_1.png']"
         )
         p.section__paragraph
           | Pain Point #2: On ‘Upload items for lend or sell’ screen, users who don’t know about their item’s details like item’s original price, material or date that users bought the item — can’t fill in the form to upload items for lend or sell. So we added ‘Unknown’ button for users who don’t know about the item’s details.
-        img.section__image(
-          src="/src/assets/insharior/pp_2.png"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/pp_2.png"
+          :images="['/src/assets/insharior/pp_2.png']"
         )
         p.section__paragraph
           | Pain Point #3: On ‘Checkout’ screen, there is no any option to select items for checkout or not. So we added checkbox for each items to make selection which items to be ordered. In addition, we added ‘Item details’ button for users can review the items before they finally checkout the items on shopping cart. We also added number of total items on this screen to make sure how many items going to be processed.
-        img.section__image(
-          src="/src/assets/insharior/pp_3.png"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/pp_3.png"
+          :images="['/src/assets/insharior/pp_3.png']"
         )
         p.section__paragraph
           | Pain Point #4: When an error occurs during ‘Checkout process’, there was no way to know what kind of error it is. So we added a line of description about the error to let users know about the error, so users can fix or re-enter the forms that error occurs. And we added ‘Save this information for faster checkout next time’ button(checkbox) for user’s convenience.
-        img.section__image(
-          src="/src/assets/insharior/pp_4.png"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/pp_4.png"
+          :images="['/src/assets/insharior/pp_4.png']"
         )
 
       div.page__section
@@ -211,8 +229,9 @@
           | * Chat bot
         p.section__paragraph
           | Insharior's chat bot helps user by recommending products based on user's taste like collected data from user(ex. recently rented product, favorite hashtag, recent viewed product, etc) or user's search patterns. User also can use hashtag to find out similar products by chat bot.
-        img.section__image(
-          src="/src/assets/insharior/chat_bot.gif"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/chat_bot.gif"
+          :images="['/src/assets/insharior/chat_bot.gif']"
         )
 
       div.page__section
@@ -220,8 +239,9 @@
           | #5. Validation & Iteration
         p.section__paragraph
           | With improved interfaces, we have some more user testings for validate our designs. The chart below is an overview of the results of changes. If testers solve some missions(Pain Points) without struggle, I marked it as "Success"
-        img.section__image(
-          src="/src/assets/insharior/beforeAfter.png"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/beforeAfter.png"
+          :images="['/src/assets/insharior/beforeAfter.png']"
         )
 
       div.page__section
@@ -229,11 +249,33 @@
           | #6. Final Output
         p.section__paragraph
           | You can check full design of this project on Behance. This project has curated on Interaction and Adobe XD Gallery on Behance. I used Adobe Photoshop, Adobe Illustrator and Adobe Experience Design to create this project. I also made some animated GIF images to explain our application's interaction, and I used ProtoPie to create these micro interactions.
-        img.section__image(
-          src="/src/assets/insharior/dribbble.gif"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/dribbble.gif"
+          :images="['/src/assets/insharior/dribbble.gif']"
         )
-        img.section__image(
-          src="/src/assets/insharior/protopie.png"
+        lightbox.section__image(
+          thumbnail="/src/assets/insharior/protopie.png"
+          :images="['/src/assets/insharior/protopie.png']"
+        )
+        lightbox.section__image.no-radius(
+          thumbnail="/src/assets/insharior/row1.png"
+          :images="['/src/assets/insharior/row1.png']"
+        )
+        lightbox.section__image.no-radius(
+          thumbnail="/src/assets/insharior/row2.png"
+          :images="['/src/assets/insharior/row2.png']"
+        )
+        lightbox.section__image.no-radius(
+          thumbnail="/src/assets/insharior/row3.png"
+          :images="['/src/assets/insharior/row3.png']"
+        )
+        lightbox.section__image.no-radius(
+          thumbnail="/src/assets/insharior/row4.png"
+          :images="['/src/assets/insharior/row4.png']"
+        )
+        lightbox.section__image.no-radius(
+          thumbnail="/src/assets/insharior/row5.png"
+          :images="['/src/assets/insharior/row5.png']"
         )
 
       div.page__section
