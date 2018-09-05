@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Portfolio from '../pages/Portfolio'
-import Articles from '../pages/Articles'
-import About from '../pages/About'
+import Portfolio from '@/pages/Portfolio'
+import Articles from '@/pages/Articles'
+import About from '@/pages/About'
 
-import Insharior from '../pages/portfolio/Insharior'
-import IGTracker from '../pages/portfolio/IGTracker'
-import AWeather from '../pages/portfolio/AWeather'
+import Insharior from '@/pages/portfolio/Insharior'
+import IGTracker from '@/pages/portfolio/IGTracker'
+import AWeather from '@/pages/portfolio/AWeather'
 
 Vue.use(VueRouter)
 
@@ -24,28 +24,30 @@ let router = new VueRouter({
     },
     {
       path: '/portfolio',
-      component: Portfolio
+      component: Portfolio,
+      children: [
+        {
+          path: 'insharior',
+          component: Insharior,
+        },
+        {
+          path: 'igtracker',
+          component: IGTracker,
+        },
+        {
+          path: 'aweather',
+          component: AWeather,
+        }
+      ]
     },
     {
       path: '/articles',
-      component: Articles
+      component: Articles,
     },
     {
       path: '/about',
-      component: About
+      component: About,
     },
-    {
-      path: '/portfolio/insharior',
-      component: Insharior
-    },
-    {
-      path: '/portfolio/igtracker',
-      component: IGTracker
-    },
-    {
-      path: '/portfolio/aweather',
-      component: AWeather
-    }
   ]
 })
 

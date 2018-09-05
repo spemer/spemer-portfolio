@@ -78,4 +78,39 @@ export default {
 
 <style lang="scss">
 
+#Footer {
+  padding: $grid8x 0;
+  margin-top: $grid16x;
+  border-top: 2px solid $texteee;
+
+
+  .footer--text,
+  .footer--icon {
+    color: $text555;
+    display: inline-block;
+    vertical-align: baseline;
+
+    @media #{$middle} {
+      display: block;
+      text-align: center;
+    }
+  }
+
+
+  .footer--icon {
+    float: right;
+
+    @media #{$middle} {
+      float: none;
+    }
+
+    a {
+      color: $text555;
+
+      &:not(:first-child) {
+        margin-left: $grid4x;
+      }
+    }
+  }
+}
 </style>

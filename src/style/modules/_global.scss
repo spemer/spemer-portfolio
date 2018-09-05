@@ -42,13 +42,14 @@
   $remSize: $size / $grid4x;
   @return $remSize * 1rem;
 }
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-}
 @mixin line-height($size) {
   line-height: $size * 1.6;
   line-height: calculateRem($size) * 1.6;
+}
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+  @include line-height($size);
 }
 
 
@@ -61,7 +62,6 @@ body {
   @include font-settings();
   @include font-stack-html();
   @include font-size($grid4x);
-  @include line-height($grid4x);
 }
 
 
@@ -83,7 +83,6 @@ h1 {
 h3 {
   font-weight: 900;
   @include font-size($grid6x);
-  @include line-height($grid6x);
 }
 
 p,

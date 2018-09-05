@@ -33,4 +33,40 @@ export default {
 
 <style lang="scss">
 
+#scroll-top {
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity .25s ease !important;
+  }
+
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  .btn--top {
+    border: none;
+    outline: none;
+    color: white;
+    right: $grid4x;
+    bottom: $grid4x;
+    cursor: pointer;
+    position: fixed;
+    width: $grid10x;
+    height: $grid10x;
+    border-radius: $grid10x;
+    background-color: $textccc;
+    transition: display .5s ease;
+
+    .fa {
+      margin-bottom: $grid;
+    }
+
+    &:hover {
+      opacity: .5;
+      transition: opacity .25s ease !important;
+    }
+  }
+}
 </style>

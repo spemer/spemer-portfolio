@@ -1,14 +1,18 @@
 <template lang="pug">
   div#articles__div
-    router-link.articles__grid(
-      v-for="(value, key) in articlesList"
-      :key="key"
-      :to="'/articles' + value[0]")
-      img.articles__img(:src="value[1]")
 
-    div#articles__nav(
-      v-if="hasLinkName"
-    ) hasLinkName
+    div.articles__grid
+      slot(
+        v-if="this.$route.path === '/articles'"
+      )
+        router-link.articles__grid--link(
+          v-for="(value, key) in articlesList"
+          :key="key"
+          :to="'/articles' + value[0]"
+        )
+          img.articles__grid--img(:src="value[1]")
+
+    router-view
 </template>
 
 <script>
@@ -34,4 +38,22 @@ export default {
 
 <style lang="scss">
 
+.articles__grid {
+  display: grid;
+  grid-gap: $grid8x;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media #{$landsc} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .articles__grid--link {
+
+    .articles__grid--img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: $grid2x;
+    }
+  }
+}
 </style>

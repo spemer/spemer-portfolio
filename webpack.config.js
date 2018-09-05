@@ -1,5 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
+const Dotenv = require('dotenv-webpack')
+require('es6-promise').polyfill()
 
 module.exports = {
   entry: './src/main.js',
@@ -8,6 +10,9 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+  plugins: [
+    new Dotenv()
+  ],
   module: {
     rules: [
       {
@@ -21,6 +26,23 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
+            'scss': [
+              'vue-style-loader',
+              'css-loader',
+              {
+                loader: 'sass-loader',
+                options: {
+                  data: `
+                    @import "./src/style/style.scss";
+                  `
+                }
+              }
+            ],
+            'sass': [
+              'vue-style-loader',
+              'css-loader',
+              'sass-loader?indentedSyntax'
+            ]
           }
           // other vue-loader options go here
         }
@@ -53,7 +75,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      "@": path.join(__dirname, "/src")
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
