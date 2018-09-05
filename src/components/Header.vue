@@ -1,12 +1,17 @@
 <template lang="pug">
   div#Header
     div.header__logo
-      router-link.header__text--title(to="/") Hyouk Seo
+      router-link.header__text--title(
+        to="/"
+        v-scroll-to="'body'"
+      ) Hyouk Seo
     div.header__link
       router-link(
         v-for="(value, key) in linkList"
         :key="key"
-        :to="value") {{key}}
+        :to="value"
+        v-scroll-to="'body'"
+      ) {{key}}
 </template>
 
 <script>

@@ -3,8 +3,8 @@
     transition(name="fade")
       button.btn--top(
         v-if="scrolled"
-        title="Back to top"
         v-scroll-to="'body'"
+        v-tooltip.left="{content: 'Back to Top', delay: {show: 500, hide: 100}}"
       )
         i.fa.fa-chevron-up
 </template>

@@ -10,7 +10,13 @@
   './modules/color',
   './modules/mqbp',
   './modules/global',
-  './modules/layout';
+  './modules/layout',
+  './modules/class';
+
+
+@import
+  './components/main',
+  './components/tooltip';
 
 
 @import

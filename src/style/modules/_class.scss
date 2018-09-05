@@ -1,0 +1,40 @@
+/* ==============================
+  box-shadow
+============================== */
+@mixin box-shadow         ($val:$grid2x, $val2:$grid4x, $color:$black16){
+  -webkit-box-shadow:  0 $val $val2 $color;
+  -ms-box-shadow:      0 $val $val2 $color;
+  -o-box-shadow:       0 $val $val2 $color;
+  box-shadow:          0 $val $val2 $color;
+}
+
+
+
+/* ==============================
+  border-radius
+============================== */
+@mixin border-radius($val:$grid4x){
+  border-radius: $val
+}
+
+
+
+/* ==============================
+  css grid layout
+============================== */
+@mixin grid-layout($col:3, $row:$grid16x, $gap:$grid8x){
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+  grid-auto-rows: minmax($row, auto);
+  grid-gap: $gap;
+}
+
+
+
+/* ==============================
+  toaster
+============================== */
+.toasted.primary.default {
+  @include box-shadow($grid, $grid2x, $black16);
+  @include border-radius($grid16x !important);
+}

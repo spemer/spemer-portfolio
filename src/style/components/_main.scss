@@ -1,0 +1,28 @@
+.portfolio__grid,
+.articles__grid {
+  display: grid;
+  grid-gap: $grid8x;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media #{$landsc} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio__grid--link,
+  .articles__grid--link {
+
+    .portfolio__grid--img,
+    .articles__grid--img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: $grid2x;
+      transition: all 1s ease;
+
+      &:hover {
+        transform: translateY(-1%);
+        transition: all .5s ease;
+        @include box-shadow();
+      }
+    }
+  }
+}

@@ -10,6 +10,7 @@
         target="_blank"
         :class="'fa fa-' + value.iconClass"
         aria-hidden="true"
+        v-tooltip.top="{content: key + '(new tab)', delay: {show: 500, hide: 100}}"
       )
 </template>
 
@@ -79,7 +80,7 @@ export default {
 <style lang="scss">
 
 #Footer {
-  padding: $grid8x 0;
+  padding: $grid8x 0 $grid12x;
   margin-top: $grid16x;
   border-top: 2px solid $texteee;
 
@@ -88,27 +89,34 @@ export default {
   .footer--icon {
     color: $text555;
     display: inline-block;
-    vertical-align: baseline;
 
     @media #{$middle} {
       display: block;
       text-align: center;
+      float: none;
     }
   }
 
 
   .footer--icon {
     float: right;
+    transform: translateY(100%);
 
     @media #{$middle} {
       float: none;
+      transform: translateY(0%);
     }
 
     a {
       color: $text555;
+      transition: opacity .25s ease;
 
       &:not(:first-child) {
         margin-left: $grid4x;
+      }
+
+      &:hover {
+        opacity: .5;
       }
     }
   }

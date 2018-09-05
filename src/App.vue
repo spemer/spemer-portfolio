@@ -4,9 +4,11 @@
     router-view
     ScrollTop
     Footer
+    vue-progress-bar
 </template>
 
 <script>
+import Vue from 'vue'
 import Header from './components/Header'
 import ScrollTop from './components/ScrollTop'
 import Footer from './components/Footer'
@@ -14,18 +16,7 @@ import Footer from './components/Footer'
 export default {
   name: 'app',
 
-  components: {
-    'Header': Header,
-    'ScrollTop': ScrollTop,
-    'Footer': Footer
-  },
-
   created () {
-    // redirect to f
-    if (window.location.href.indexOf(this.g) > -1) {
-      window.location.href = this.f
-    }
-
     // load progressbar
     this.$Progress.start()
     this.$router.beforeEach((to, from, next) => {
@@ -44,6 +35,13 @@ export default {
   mounted () {
     this.$Progress.finish()
   },
+
+  components: {
+    Header,
+    ScrollTop,
+    Footer
+  },
+
 }
 </script>
 

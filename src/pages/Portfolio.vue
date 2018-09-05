@@ -9,8 +9,11 @@
           v-for="(value, key) in portfolioList"
           :key="key"
           :to="'/portfolio' + value[0]"
+          v-scroll-to="'body'"
         )
-          img.portfolio__grid--img(:src="value[1]")
+          img.portfolio__grid--img(
+            :src="value[1]"
+          )
 
     router-view
 </template>
@@ -30,7 +33,7 @@ export default {
         Memoree: ['/memoree', 'src/assets/memoree/thumb.png'],
         Sprinter: ['/sprinter', 'src/assets/sprinter/thumb.png'],
         Suhyup: ['/suhyup', 'src/assets/suhyup/thumb.png'],
-        FlatIcons: ['/flat-icons', 'src/assets/flaticon/house.jpg']
+        FlatIcons: ['/flaticons', 'src/assets/flaticon/house.jpg']
       }
     }
   },
@@ -42,22 +45,4 @@ export default {
 
 <style lang="scss">
 
-.portfolio__grid {
-  display: grid;
-  grid-gap: $grid8x;
-  grid-template-columns: repeat(3, 1fr);
-
-  @media #{$landsc} {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .portfolio__grid--link {
-
-    .portfolio__grid--img {
-      width: 100%;
-      object-fit: cover;
-      border-radius: $grid2x;
-    }
-  }
-}
 </style>

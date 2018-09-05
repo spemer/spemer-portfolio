@@ -1,11 +1,10 @@
 <template lang="pug">
-  div#page--igtracker
-    | IGTracker
+  div
 </template>
 
 <script>
 export default {
-  name: 'igtracker'
+
 }
 </script>
 
