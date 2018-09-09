@@ -1,7 +1,9 @@
 <template lang="pug">
   div#Footer
+
     div.footer--text
       codeBy
+
     div.footer--icon
       a(
         v-for="(value, key) in snsIconList"
@@ -15,6 +17,8 @@
 </template>
 
 <script>
+import {globalVar} from '@/globalVar'
+
 let codeBy = {
   template: '\
     <p>\
@@ -25,6 +29,7 @@ let codeBy = {
 
 export default {
   name: 'Footer',
+
   data () {
     return {
       snsIconList: {
@@ -71,9 +76,11 @@ export default {
       }
     }
   },
+
   components: {
     'codeBy': codeBy
-  }
+  },
+
 }
 </script>
 

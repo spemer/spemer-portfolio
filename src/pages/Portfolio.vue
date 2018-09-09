@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import {globalVar} from '@/globalVar'
+
 export default {
   name: 'portfolio',
 
@@ -39,7 +41,13 @@ export default {
   },
 
   components: {
-  }
+  },
+
+  metaInfo: {
+    title: globalVar.fullname,
+    titleTemplate: '%s',
+  },
+
 }
 </script>
 

@@ -4,8 +4,16 @@
 </template>
 
 <script>
+import {globalVar} from '@/globalVar'
+
 export default {
-  name: 'aweather'
+  name: 'aweather',
+
+  metaInfo: {
+    title: globalVar.fullname,
+    titleTemplate: '%s - AWeather',
+  },
+
 }
 </script>
 

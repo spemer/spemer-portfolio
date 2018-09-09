@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import {globalVar} from '@/globalVar'
+
 export default {
   name: 'articles',
   data () {
@@ -35,7 +37,13 @@ export default {
         Firebase: ['/firebase', 'src/assets/firebase/firebase_logo.jpg']
       }
     }
-  }
+  },
+
+  metaInfo: {
+    title: globalVar.fullname,
+    titleTemplate: '%s - Articles',
+  },
+
 }
 </script>
 

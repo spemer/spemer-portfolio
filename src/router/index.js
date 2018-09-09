@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Meta from 'vue-meta'
 
 import Portfolio from '@/pages/Portfolio'
 import Articles from '@/pages/Articles'
@@ -26,6 +27,7 @@ import Material from '@/pages/articles/Material'
 import Firebase from '@/pages/articles/Firebase'
 
 Vue.use(VueRouter)
+Vue.use(Meta)
 
 let router = new VueRouter({
   mode: 'history',

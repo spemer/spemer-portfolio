@@ -6,13 +6,21 @@
 </template>
 
 <script>
+import {globalVar} from '@/globalVar'
+
 export default {
   name: 'About',
   data () {
     return {
 
     }
-  }
+  },
+
+  metaInfo: {
+    title: globalVar.fullname,
+    titleTemplate: '%s - About',
+  },
+
 }
 </script>
 

@@ -1,10 +1,12 @@
 <template lang="pug">
   div#Header
+
     div.header__logo
       router-link.header__text--title(
         to="/"
         v-scroll-to="'body'"
       ) Hyouk Seo
+
     div.header__link
       router-link(
         v-for="(value, key) in linkList"
@@ -15,8 +17,11 @@
 </template>
 
 <script>
+import {globalVar} from '@/globalVar'
+
 export default {
   name: 'Header',
+
   data () {
     return {
       linkList: {
@@ -25,7 +30,8 @@ export default {
         About: '/about'
       }
     }
-  }
+  },
+
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template lang="pug">
-  div#page--insharior
+  div#page
     div.page__wrapper
       div.page__section
         h3.page__title
@@ -296,8 +296,16 @@
 </template>
 
 <script>
+import {globalVar} from '@/globalVar'
+
 export default {
-  name: 'insharior'
+  name: 'insharior',
+
+  metaInfo: {
+    title: globalVar.fullname,
+    titleTemplate: '%s - Insharior',
+  },
+
 }
 </script>
 
