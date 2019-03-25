@@ -1,23 +1,11 @@
 @charset 'UTF-8';
 
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Roboto+Slab');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-@import url("https://fonts.googleapis.com/css?family=Merriweather|Roboto+Slab");
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import './modules/grid', './modules/color', './modules/mqbp',
+  './modules/global', './modules/layout', './modules/class';
 
+@import './components/main', './components/tooltip';
 
-@import
-  './modules/grid',
-  './modules/color',
-  './modules/mqbp',
-  './modules/global',
-  './modules/layout',
-  './modules/class';
-
-
-@import
-  './components/main',
-  './components/tooltip';
-
-
-@import
-  './pages/page';
+@import './pages/page';

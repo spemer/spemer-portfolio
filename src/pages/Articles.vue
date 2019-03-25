@@ -12,9 +12,8 @@
           v-scroll-to="'body'"
         )
           img.articles__grid--img(
-            :src="value[1]"
+            :src="'src/assets/' + value[1]"
           )
-
     router-view
 </template>
 
@@ -26,16 +25,43 @@ export default {
   data () {
     return {
       articlesList: {
-        Sass: ['/sass', 'src/assets/sass/thumb.png'],
-        Gulp: ['/gulp', 'src/assets/gulp/thumb.png'],
-        Favicon: ['/favicon', 'src/assets/favicon/favicon.png'],
-        Scrollbar: ['/scrollbar', 'src/assets/scroll/cover.png'],
-        Variables: ['/css-variables', 'src/assets/css/thumb.png'],
-        Bodymovin: ['/bodymovin', 'src/assets/bodymovin/cover.png'],
-        Jekyll: ['/jekyll', 'src/assets/jekyll/thumb.png'],
-        Material: ['/material', 'src/assets/material/material.png'],
-        Firebase: ['/firebase', 'src/assets/firebase/firebase_logo.jpg']
-      }
+        Sass: [
+          globalVar.articlesList.Sass[0],
+          globalVar.articlesList.Sass[1],
+        ],
+        Gulp: [
+          globalVar.articlesList.Gulp[0],
+          globalVar.articlesList.Gulp[1],
+        ],
+        Favicon: [
+          globalVar.articlesList.Favicon[0],
+          globalVar.articlesList.Favicon[1],
+        ],
+        Scrollbar: [
+          globalVar.articlesList.Scrollbar[0],
+          globalVar.articlesList.Scrollbar[1],
+        ],
+        Variables: [
+          globalVar.articlesList.Variables[0],
+          globalVar.articlesList.Variables[1],
+        ],
+        Bodymovin: [
+          globalVar.articlesList.Bodymovin[0],
+          globalVar.articlesList.Bodymovin[1],
+        ],
+        Jekyll: [
+          globalVar.articlesList.Jekyll[0],
+          globalVar.articlesList.Jekyll[1],
+        ],
+        Material: [
+          globalVar.articlesList.Material[0],
+          globalVar.articlesList.Material[1],
+        ],
+        Firebase: [
+          globalVar.articlesList.Firebase[0],
+          globalVar.articlesList.Firebase[1],
+        ],
+      },
     }
   },
 
@@ -48,5 +74,4 @@ export default {
 </script>
 
 <style lang="scss">
-
 </style>

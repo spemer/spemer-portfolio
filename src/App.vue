@@ -3,6 +3,7 @@
     Header
     router-view
     ScrollTop
+    Hamburger
     Footer
     vue-progress-bar
 </template>
@@ -11,6 +12,7 @@
 import Vue from 'vue'
 import Header from './components/Header'
 import ScrollTop from './components/ScrollTop'
+import Hamburger from './components/Hamburger'
 import Footer from './components/Footer'
 
 export default {
@@ -39,12 +41,12 @@ export default {
   components: {
     Header,
     ScrollTop,
-    Footer
+    Hamburger,
+    Footer,
   },
 
 }
 </script>
 
 <style lang="scss">
-
 </style>

@@ -14,6 +14,10 @@
         :to="value"
         v-scroll-to="'body'"
       ) {{key}}
+      a(
+        target="_blank"
+        :href="CV"
+      ) CV
 </template>
 
 <script>
@@ -27,8 +31,9 @@ export default {
       linkList: {
         Portfolio: '/',
         Articles: '/articles',
-        About: '/about'
-      }
+        About: '/about',
+      },
+      CV: 'https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing'
     }
   },
 
@@ -36,7 +41,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 #Header {
   padding: $grid16x 0;
   margin-bottom: $grid16x;
@@ -46,7 +50,6 @@ export default {
     text-align: center;
     padding: $grid16x 0 $grid12x;
   }
-
 
   .header__logo,
   .header__link {
@@ -64,9 +67,7 @@ export default {
     }
   }
 
-
   .header__logo {
-
     a {
       font-size: $grid8x;
     }
@@ -77,7 +78,6 @@ export default {
       margin-bottom: $grid8x;
     }
   }
-
 
   .header__link {
     float: right;

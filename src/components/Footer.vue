@@ -11,6 +11,7 @@
         :href="'https://' + value.href"
         target="_blank"
         :class="'fa fa-' + value.iconClass"
+        :id="value.iconID"
         aria-hidden="true"
         v-tooltip.top="{content: key + '(new tab)', delay: {show: 500, hide: 100}}"
       )
@@ -85,12 +86,10 @@ export default {
 </script>
 
 <style lang="scss">
-
 #Footer {
   padding: $grid8x 0 $grid12x;
   margin-top: $grid16x;
   border-top: 2px solid $texteee;
-
 
   .footer--text,
   .footer--icon {
@@ -104,7 +103,6 @@ export default {
     }
   }
 
-
   .footer--icon {
     float: right;
     transform: translateY(100%);
@@ -116,16 +114,52 @@ export default {
 
     a {
       color: $text555;
-      transition: opacity .25s ease;
+      @include transition(all 0.25s ease);
 
       &:not(:first-child) {
         margin-left: $grid4x;
       }
 
       &:hover {
-        opacity: .5;
+        @include transform(translateY(-2.5px));
       }
     }
   }
+}
+
+#twIcon:hover {
+  color: #1da1f2 !important;
+}
+
+#ghIcon:hover {
+  color: #333 !important;
+}
+
+#liIcon:hover {
+  color: #0077b5 !important;
+}
+
+#fbIcon:hover {
+  color: #3b5998 !important;
+}
+
+#inIcon:hover {
+  color: #e1306c !important;
+}
+
+#beIcon:hover {
+  color: #1769ff !important;
+}
+
+#drIcon:hover {
+  color: #ea4c89 !important;
+}
+
+#scIcon:hover {
+  color: #f30 !important;
+}
+
+#medIcon:hover {
+  color: #00ab6c !important;
 }
 </style>
