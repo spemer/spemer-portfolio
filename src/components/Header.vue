@@ -5,7 +5,7 @@
       router-link.header__text--title(
         to="/"
         v-scroll-to="'body'"
-      ) Hyouk Seo
+      ) {{ name }}
 
     div.header__link
       router-link(
@@ -13,18 +13,25 @@
         :key="key"
         :to="value"
         v-scroll-to="'body'"
-      ) {{key}}
+      ) {{ key }}
       a(
         target="_blank"
-        :href="CV"
+        :href="'CV'"
       ) CV
 </template>
 
 <script>
-import {globalVar} from '@/globalVar'
-
 export default {
   name: 'Header',
+
+  computed: {
+    name () {
+      return this.$store.state.name
+    },
+    cv () {
+      return this.$store.state.cv
+    }
+  },
 
   data () {
     return {
@@ -33,7 +40,6 @@ export default {
         Articles: '/articles',
         About: '/about',
       },
-      CV: 'https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing'
     }
   },
 

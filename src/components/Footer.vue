@@ -31,50 +31,9 @@ let codeBy = {
 export default {
   name: 'Footer',
 
-  data () {
-    return {
-      snsIconList: {
-        Twitter: {
-          href : 'twitter.com/OfficialSpemer',
-          iconID : 'twIcon',
-          iconClass : 'twitter'
-        },
-        GitHub: {
-          href : 'github.com/spemer',
-          iconID : 'ghIcon',
-          iconClass : 'github'
-        },
-        FaceBook: {
-          href : 'facebook.com/ghsspower',
-          iconID : 'fbIcon',
-          iconClass : 'facebook'
-        },
-        Instagram: {
-          href : 'instagram.com/spemer/',
-          iconID : 'inIcon',
-          iconClass : 'instagram'
-        },
-        LinkedIn: {
-          href : 'www.linkedin.com/in/hyouk-seo-0b6801122/',
-          iconID : 'liIcon',
-          iconClass : 'linkedin'
-        },
-        Dribbble: {
-          href : 'dribbble.com/spemer',
-          iconID : 'drIcon',
-          iconClass : 'dribbble'
-        },
-        Medium: {
-          href : 'medium.com/@spemer',
-          iconID : 'medIcon',
-          iconClass : 'medium'
-        },
-        Behance: {
-          href : 'behance.net/spemer',
-          iconID : 'beIcon',
-          iconClass : 'behance'
-        }
-      }
+  computed: {
+    snsIconList() {
+      return this.$store.state.snsIconList
     }
   },
 

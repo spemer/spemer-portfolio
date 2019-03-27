@@ -11,20 +11,17 @@ import Lightbox from 'vue-pure-lightbox'
 
 import '@/style/style.scss'
 
-
-Vue.use(VueI18n) // locale
+Vue.use(VueI18n)
 Vue.use(VTooltip)
 Vue.use(VueScrollTo)
 Vue.use(VueScrollReveal)
 Vue.use(Lightbox)
 // https://www.npmjs.com/package/vue-pure-lightbox
 
-
 Vue.use(VueProgressBar, {
   color: '#034A9A',
   height: '2px'
 })
-
 
 new Vue({
   el: '#app',

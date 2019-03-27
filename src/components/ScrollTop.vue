@@ -10,8 +10,6 @@
 </template>
 
 <script>
-import {globalVar} from '@/globalVar'
-
 export default {
   name: 'scrollTop',
 
@@ -39,12 +37,10 @@ export default {
 </script>
 
 <style lang="scss">
-
 #scroll-top {
-
   .fade-enter-active,
   .fade-leave-active {
-    transition: opacity .25s ease !important;
+    transition: opacity 0.25s ease !important;
   }
 
   .fade-enter,
@@ -64,15 +60,15 @@ export default {
     height: $grid10x;
     border-radius: $grid10x;
     background-color: $textccc;
-    transition: display .5s ease;
+    transition: display 0.5s ease;
 
     .fa {
       margin-bottom: $grid;
     }
 
     &:hover {
-      opacity: .5;
-      transition: opacity .25s ease !important;
+      opacity: 0.5;
+      transition: opacity 0.25s ease !important;
     }
   }
 }

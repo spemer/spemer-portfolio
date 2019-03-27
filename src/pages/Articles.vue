@@ -1,6 +1,5 @@
 <template lang="pug">
   div#articles__div
-
     div.articles__grid
       slot(
         v-if="this.$route.path === '/articles'"
@@ -23,50 +22,11 @@ import {globalVar} from '@/globalVar'
 
 export default {
   name: 'articles',
-  data () {
-    return {
-      articlesList: {
-        Sass: [
-          globalVar.articlesList.Sass[0],
-          globalVar.articlesList.Sass[1],
-        ],
-        Gulp: [
-          globalVar.articlesList.Gulp[0],
-          globalVar.articlesList.Gulp[1],
-        ],
-        Favicon: [
-          globalVar.articlesList.Favicon[0],
-          globalVar.articlesList.Favicon[1],
-        ],
-        Scrollbar: [
-          globalVar.articlesList.Scrollbar[0],
-          globalVar.articlesList.Scrollbar[1],
-        ],
-        Variables: [
-          globalVar.articlesList.Variables[0],
-          globalVar.articlesList.Variables[1],
-        ],
-        Bodymovin: [
-          globalVar.articlesList.Bodymovin[0],
-          globalVar.articlesList.Bodymovin[1],
-        ],
-        Jekyll: [
-          globalVar.articlesList.Jekyll[0],
-          globalVar.articlesList.Jekyll[1],
-        ],
-        Material: [
-          globalVar.articlesList.Material[0],
-          globalVar.articlesList.Material[1],
-        ],
-        Firebase: [
-          globalVar.articlesList.Firebase[0],
-          globalVar.articlesList.Firebase[1],
-        ],
-      },
-    }
-  },
 
-  components: {
+  computed: {
+    articlesList() {
+      return this.$store.state.articlesList
+    }
   },
 
   metaInfo: {

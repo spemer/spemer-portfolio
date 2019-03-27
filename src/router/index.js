@@ -121,12 +121,6 @@ let router = new VueRouter({
           component: About,
         },
       ],
-      // children: [
-      //   {
-      //     path: '/portfolio',
-      //     component: Portfolio,
-      //   },
-      // ],
     },
   ],
   scrollBehavior(to, from, savedPosition) {

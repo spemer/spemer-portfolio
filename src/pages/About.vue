@@ -10,6 +10,7 @@ import {globalVar} from '@/globalVar'
 
 export default {
   name: 'About',
+
   data () {
     return {
 
@@ -28,9 +29,7 @@ export default {
 @import '../style/style.scss';
 
 #about__div {
-
   .page__wrapper {
-
     .page__wrapper--title {
       font-size: $grid6x;
     }

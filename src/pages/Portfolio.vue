@@ -23,50 +23,10 @@ import {globalVar} from '@/globalVar'
 export default {
   name: 'portfolio',
 
-  data () {
-    return {
-      portfolioList: {
-        Insharior: [
-          globalVar.portfolioList.Insharior[0],
-          globalVar.portfolioList.Insharior[1],
-        ],
-        IGTracker: [
-          globalVar.portfolioList.IGTracker[0],
-          globalVar.portfolioList.IGTracker[1],
-        ],
-        AWeather: [
-          globalVar.portfolioList.AWeather[0],
-          globalVar.portfolioList.AWeather[1],
-        ],
-        UnivCam: [
-          globalVar.portfolioList.UnivCam[0],
-          globalVar.portfolioList.UnivCam[1],
-        ],
-        Neighbors: [
-          globalVar.portfolioList.Neighbors[0],
-          globalVar.portfolioList.Neighbors[1],
-        ],
-        Memoree: [
-          globalVar.portfolioList.Memoree[0],
-          globalVar.portfolioList.Memoree[1],
-        ],
-        Sprinter: [
-          globalVar.portfolioList.Sprinter[0],
-          globalVar.portfolioList.Sprinter[1],
-        ],
-        Suhyup: [
-          globalVar.portfolioList.Suhyup[0],
-          globalVar.portfolioList.Suhyup[1],
-        ],
-        FlatIcons: [
-          globalVar.portfolioList.FlatIcons[0],
-          globalVar.portfolioList.FlatIcons[1],
-        ]
-      },
+  computed: {
+    portfolioList() {
+      return this.$store.state.portfolioList
     }
-  },
-
-  components: {
   },
 
   metaInfo: {

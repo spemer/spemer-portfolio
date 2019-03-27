@@ -5,6 +5,7 @@ export const globalVar = new Vue({
     name: 'Hyouk Seo',
     nickname: 'Spemer',
     fullname: 'Hyouk Seo(Spemer)',
+    cv: 'https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing',
 
     portfolioList: {
       Insharior: ['/insharior', 'insharior/thumb.png'],
