@@ -17,7 +17,7 @@
             @click="hamburgerToggle"
           )
             router-link(
-              :to="'/portfolio' + value"
+              :to="value"
             ) {{ key }}
           li(
             v-for="(value, key) in articlesList"

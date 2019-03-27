@@ -13,6 +13,7 @@
         )
           img.articles__grid--img(
             :src="'src/assets/' + value[1]"
+            v-tooltip.bottom="{content: key, delay: {show: 500, hide: 100}}"
           )
     router-view
 </template>
@@ -63,6 +64,9 @@ export default {
         ],
       },
     }
+  },
+
+  components: {
   },
 
   metaInfo: {

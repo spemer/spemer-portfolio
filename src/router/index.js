@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Meta from 'vue-meta';
 
+import Home from '@/pages/Home';
 import Portfolio from '@/pages/Portfolio';
 import Articles from '@/pages/Articles';
 import About from '@/pages/About';
@@ -31,52 +32,108 @@ Vue.use(Meta);
 
 let router = new VueRouter({
   mode: 'history',
-  routes: [
-    {
+  routes: [{
       path: '*',
-      redirect: '/portfolio',
+      redirect: '/',
     },
     {
       path: '/',
-      redirect: '/portfolio',
-    },
-    {
-      path: '/portfolio',
-      component: Portfolio,
-      children: [
-        { path: 'insharior', component: Insharior },
-        { path: 'igtracker', component: IGTracker },
-        { path: 'aweather', component: AWeather },
-        { path: 'univcam', component: UnivCam },
-        { path: 'neighbors', component: Neighbors },
-        { path: 'memoree', component: Memoree },
-        { path: 'sprinter', component: Sprinter },
-        { path: 'suhyup', component: Suhyup },
-        { path: 'flaticons', component: FlatIcons },
+      component: Home,
+      children: [{
+          path: 'insharior',
+          component: Insharior
+        },
+        {
+          path: 'igtracker',
+          component: IGTracker
+        },
+        {
+          path: 'aweather',
+          component: AWeather
+        },
+        {
+          path: 'univcam',
+          component: UnivCam
+        },
+        {
+          path: 'neighbors',
+          component: Neighbors
+        },
+        {
+          path: 'memoree',
+          component: Memoree
+        },
+        {
+          path: 'sprinter',
+          component: Sprinter
+        },
+        {
+          path: 'suhyup',
+          component: Suhyup
+        },
+        {
+          path: 'flaticons',
+          component: FlatIcons
+        },
+        {
+          path: '/articles',
+          component: Articles,
+          children: [{
+              path: 'sass',
+              component: Sass
+            },
+            {
+              path: 'gulp',
+              component: Gulp
+            },
+            {
+              path: 'favicon',
+              component: Favicon
+            },
+            {
+              path: 'scrollbar',
+              component: ScrollBar
+            },
+            {
+              path: 'css-variables',
+              component: Css
+            },
+            {
+              path: 'bodymovin',
+              component: Bodymovin
+            },
+            {
+              path: 'jekyll',
+              component: Jekyll
+            },
+            {
+              path: 'material',
+              component: Material
+            },
+            {
+              path: 'firebase',
+              component: Firebase
+            },
+          ],
+        },
+        {
+          path: '/about',
+          component: About,
+        },
       ],
-    },
-    {
-      path: '/articles',
-      component: Articles,
-      children: [
-        { path: 'sass', component: Sass },
-        { path: 'gulp', component: Gulp },
-        { path: 'favicon', component: Favicon },
-        { path: 'scrollbar', component: ScrollBar },
-        { path: 'css-variables', component: Css },
-        { path: 'bodymovin', component: Bodymovin },
-        { path: 'jekyll', component: Jekyll },
-        { path: 'material', component: Material },
-        { path: 'firebase', component: Firebase },
-      ],
-    },
-    {
-      path: '/about',
-      component: About,
+      // children: [
+      //   {
+      //     path: '/portfolio',
+      //     component: Portfolio,
+      //   },
+      // ],
     },
   ],
   scrollBehavior(to, from, savedPosition) {
-    return { x: 0, y: 0 };
+    return {
+      x: 0,
+      y: 0
+    };
   },
 });
 

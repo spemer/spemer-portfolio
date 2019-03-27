@@ -14,9 +14,9 @@
 }
 
 @mixin font-stack-quote() {
-  font-family: 'Cambria', 'Times New Roman', 'Merriweather',serif;
-  -moz-font-family: 'Cambria', 'Times New Roman', 'Merriweather',serif;
-  -webkit-font-family: 'Cambria', 'Times New Roman', 'Merriweather',serif;
+  font-family: 'Cambria', 'Times New Roman', 'Merriweather', serif;
+  -moz-font-family: 'Cambria', 'Times New Roman', 'Merriweather', serif;
+  -webkit-font-family: 'Cambria', 'Times New Roman', 'Merriweather', serif;
 }
 
 /* ==============================
@@ -24,14 +24,14 @@
 ============================== */
 @mixin font-settings() {
   direction: ltr;
-          font-feature-settings: 'liga';
-     -moz-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -moz-font-feature-settings: 'liga';
   -webkit-font-feature-settings: 'liga';
   -moz-osx-font-smoothing: grayscale !important;
-   -webkit-font-smoothing: antialiased !important;
-          text-rendering:  optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
   -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink;
+  text-decoration-skip: ink;
 }
 
 
@@ -42,10 +42,12 @@
   $remSize: $size / $grid4x;
   @return $remSize * 1rem;
 }
+
 @mixin line-height($size) {
   line-height: $size * 1.6;
   line-height: calculateRem($size) * 1.6;
 }
+
 @mixin font-size($size) {
   font-size: $size;
   font-size: calculateRem($size);
@@ -92,6 +94,6 @@ span {
   @include line-height($grid5x);
 
   b {
-      font-weight: 900;
+    font-weight: 900;
   }
 }

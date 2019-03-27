@@ -1,18 +1,18 @@
 <template lang="pug">
   div#portfolio__div
-
     div.portfolio__grid
       slot(
-        v-if="this.$route.path === '/portfolio'"
+        v-if="this.$route.path === '/'"
       )
         router-link.portfolio__grid--link(
           v-for="(value, key) in portfolioList"
           :key="key"
-          :to="'/portfolio' + value[0]"
+          :to="value[0]"
           v-scroll-to="'body'"
         )
           img.portfolio__grid--img(
             :src="'src/assets/' + value[1]"
+            v-tooltip.bottom="{content: key, delay: {show: 500, hide: 100}}"
           )
     router-view
 </template>
