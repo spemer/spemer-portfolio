@@ -16,30 +16,29 @@
       ) {{ key }}
       a(
         target="_blank"
-        :href="'CV'"
+        :href="this.cv"
       ) CV
 </template>
 
 <script>
+import {globalVar} from '@/globalVar'
+
 export default {
   name: 'Header',
 
-  computed: {
-    name () {
-      return this.$store.state.name
-    },
-    cv () {
-      return this.$store.state.cv
+  data () {
+    return {
+      name: globalVar.name
     }
   },
 
-  data () {
-    return {
-      linkList: {
-        Portfolio: '/',
-        Articles: '/articles',
-        About: '/about',
-      },
+  computed: {
+    cv() {
+      return this.$store.state.cv
+    },
+
+    linkList() {
+      return this.$store.state.linkList
     }
   },
 

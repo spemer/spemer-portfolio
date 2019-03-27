@@ -8,10 +8,13 @@ export default new Vuex.Store({
   debug: true,
 
   state: {
-    name: 'Hyouk Seo',
-    nickname: 'Spemer',
-    fullname: 'Hyouk Seo(Spemer)',
     cv: 'https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing',
+
+    linkList: {
+      Portfolio: '/',
+      Articles: '/articles',
+      About: '/about',
+    },
 
     portfolioList: {
       Insharior: ['/insharior', 'insharior/thumb.png'],

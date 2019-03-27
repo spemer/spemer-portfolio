@@ -26,7 +26,11 @@ export default {
   computed: {
     articlesList() {
       return this.$store.state.articlesList
-    }
+    },
+
+    fullname() {
+      return this.$store.state.fullname
+    },
   },
 
   metaInfo: {

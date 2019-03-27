@@ -17,7 +17,7 @@
             @click="hamburgerToggle"
           )
             router-link(
-              :to="value"
+              :to="value[0]"
             ) {{ key }}
           li(
             v-for="(value, key) in articlesList"
@@ -25,7 +25,7 @@
             @click="hamburgerToggle"
           )
             router-link(
-              :to="'/articles' + value"
+              :to="'/articles' + value[0]"
             ) {{ key }}
 </template>
 
@@ -33,30 +33,19 @@
 import {globalVar} from '@/globalVar'
 
 export default {
+
+  computed: {
+    portfolioList() {
+      return this.$store.state.portfolioList
+    },
+
+    articlesList() {
+      return this.$store.state.articlesList
+    },
+  },
+
   data () {
     return {
-      portfolioList: {
-        Insharior: globalVar.portfolioList.Insharior[0],
-        IGTracker: globalVar.portfolioList.IGTracker[0],
-        AWeather: globalVar.portfolioList.AWeather[0],
-        UnivCam: globalVar.portfolioList.UnivCam[0],
-        Neighbors: globalVar.portfolioList.Neighbors[0],
-        Memoree: globalVar.portfolioList.Memoree[0],
-        Sprinter: globalVar.portfolioList.Sprinter[0],
-        Suhyup: globalVar.portfolioList.Suhyup[0],
-        FlatIcons: globalVar.portfolioList.FlatIcons[0],
-      },
-      articlesList: {
-        Sass: globalVar.articlesList.Sass[0],
-        Gulp: globalVar.articlesList.Gulp[0],
-        Favicon: globalVar.articlesList.Favicon[0],
-        Scrollbar: globalVar.articlesList.Scrollbar[0],
-        Variables: globalVar.articlesList.Variables[0],
-        Bodymovin: globalVar.articlesList.Bodymovin[0],
-        Jekyll: globalVar.articlesList.Jekyll[0],
-        Material: globalVar.articlesList.Material[0],
-        Firebase: globalVar.articlesList.Firebase[0],
-      },
       show: false,
     }
   },

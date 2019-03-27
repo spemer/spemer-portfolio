@@ -20,7 +20,7 @@
 <script>
 import {globalVar} from '@/globalVar'
 
-let codeBy = {
+const codeBy = {
   template: '\
     <p>\
       <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by Hyouk Seo\

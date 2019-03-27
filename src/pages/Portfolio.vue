@@ -26,7 +26,7 @@ export default {
   computed: {
     portfolioList() {
       return this.$store.state.portfolioList
-    }
+    },
   },
 
   metaInfo: {
