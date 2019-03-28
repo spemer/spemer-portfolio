@@ -144,8 +144,6 @@
           | It’s not a scrollable screen. We are showing fixed number of mandatory items, to give the user the feel of control on what’s happening with user’s account analytics, on a high level.
         p.section__paragraph
           | For the very first time, we had more graphs on the main screen for more insight than the current design. However, after thinking carefully about what really users need, we decided to offer only 5 graphs in total: 'Followers Growth', 'Unfollowed Me', 'Not Following Me Back', 'Blocked Me' and 'Deleted Comments/Likes'.
-
-
 </template>
 
 <script>
@@ -163,5 +161,4 @@ export default {
 </script>
 
 <style lang="scss">
-
 </style>

@@ -1,90 +1,91 @@
 // #page {
 
-  .page__wrapper {
-    width: 560px;
-    margin: 0 auto;
+.page__wrapper {
+  width: 560px;
+  margin: 0 auto;
 
-    .page__section {
+  .page__section {
 
-      &:not(:first-child) {
-        margin-top: $grid16x;
+    &:not(:first-child) {
+      margin-top: $grid16x;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $grid16x;
+    }
+
+    .page__title,
+    .section__title {
+      margin-bottom: -#{$grid3x};
+      @include font-stack-title();
+    }
+
+    .section__title {
+      @include font-size($grid7x);
+    }
+
+    // .page__subtitle {
+    // }
+
+    .section__title--small {
+      font-weight: 900;
+      margin: $grid4x 0 -#{$grid3x};
+      @include font-size($grid5x);
+      @include font-stack-title();
+
+      &:not(:first-of-type) {
+        margin: $grid16x 0 -#{$grid3x};
+      }
+    }
+
+    .section__quote {
+      margin: $grid16x 0;
+      text-align: center;
+      font-style: italic;
+      @include font-size($grid6x);
+      @include font-stack-quote();
+      @include line-height($grid6x);
+    }
+
+    .section__image {
+      width: 100%;
+      display: block;
+      margin: $grid8x auto;
+      border-radius: $grid2x;
+
+      &.no-radius {
+        border-radius: 0;
       }
 
-      &:not(:last-child) {
-        margin-bottom: $grid16x;
-      }
+      &.img--50 {
+        width: 50%;
 
-      .page__title,
-      .section__title {
-        margin-bottom: -#{$grid3x};
-        @include font-stack-title();
-      }
-
-      .section__title {
-        @include font-size($grid7x);
-      }
-
-      // .page__subtitle {
-      // }
-
-      .section__title--small {
-        font-weight: 900;
-        margin: $grid4x 0 -#{$grid3x};
-        @include font-size($grid5x);
-        @include font-stack-title();
-
-        &:not(:first-of-type) {
-          margin: $grid16x 0 -#{$grid3x};
+        @media #{$tablet} {
+          width: 100%;
         }
       }
 
-      .section__quote {
-        margin: $grid16x 0;
-        text-align: center;
-        font-style: italic;
-        @include font-size($grid6x);
-        @include font-stack-quote();
-        @include line-height($grid6x);
+      &.img--35 {
+        width: 35%;
+
+        @media #{$tablet} {
+          width: 100%;
+        }
       }
 
-      .section__image {
-        width: 100%;
-        display: block;
-        margin: $grid8x auto;
-        border-radius: $grid2x;
+      &.img--75 {
+        width: 75%;
 
-        &.no-radius {
-          border-radius: 0;
+        @media #{$tablet} {
+          width: 100%;
         }
+      }
 
-        &.img--50 {
-          width: 50%;
-
-          @media #{$tablet} {
-            width: 100%;
-          }
-        }
-
-        &.img--35 {
-          width: 35%;
-
-          @media #{$tablet} {
-            width: 100%;
-          }
-        }
-
-        &.img--75 {
-          width: 75%;
-
-          @media #{$tablet} {
-            width: 100%;
-          }
-        }
-
-        &.img--line {
-          border: 1px solid $texteee;
-        }
+      &.img--line {
+        border: 1px solid $texteee;
       }
     }
   }
+}
+
 // }

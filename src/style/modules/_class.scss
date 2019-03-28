@@ -44,11 +44,13 @@
 @mixin border-radius($radius) {
   border-radius: $radius;
 }
+
 @mixin transform($v) {
   -webkit-transform: $v;
   -khtml-transform: $v;
   transform: $v;
 }
+
 @mixin transition($v) {
   -webkit-transition: $v;
   transition: $v;
@@ -59,10 +61,12 @@
   -webkit-transition-duration: $f, $s;
   transition-duration: $f, $s;
 }
+
 @mixin transition-delay($f, $s) {
   -webkit-transition-delay: $f, $s;
   transition-delay: $f, $s;
 }
+
 @mixin transition-property($f, $s) {
   -webkit-transition-property: $f, $s;
   transition-property: $f, $s;

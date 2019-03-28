@@ -1,6 +1,5 @@
 <template lang="pug">
   div#Header
-
     div.header__logo
       router-link.header__text--title(
         to="/"

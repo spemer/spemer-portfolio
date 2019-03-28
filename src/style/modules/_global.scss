@@ -61,6 +61,7 @@
 body {
   outline: none;
   color: $text555;
+  background: #fff;
   @include font-settings();
   @include font-stack-html();
   @include font-size($grid4x);

@@ -16,8 +16,31 @@
 export default {
   data () {
     return {
-
+      thisUrl: window.location.href,
+      next: undefined,
+      back: undefined,
     }
+  },
+
+  // methods: {
+  //   setNextText() {
+  //     for(var i = 0; i < portfolioList.length; i++) {
+  //       if(this.thisUrl.indexOf(portfolioList[i]) != 1) {
+  //         this.next == portfolioList.value[i + 1]
+  //         return this.next
+  //       }
+  //     }
+  //   },
+  // },
+
+  computed: {
+    portfolioList() {
+      return this.$store.state.portfolioList
+    },
+
+    articlesList() {
+      return this.$store.state.articlesList
+    },
   }
 }
 </script>
@@ -34,6 +57,8 @@ export default {
     }
   }
 
+  .back,
+  .next,
   .backToMainPage {
     float: right;
   }
