@@ -24,7 +24,7 @@ export default {
   name: 'portfolio',
 
   computed: {
-    portfolioList() {
+    portfolioList () {
       return this.$store.state.portfolioList
     },
   },

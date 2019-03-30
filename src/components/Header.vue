@@ -32,11 +32,11 @@ export default {
   },
 
   computed: {
-    cv() {
+    cv () {
       return this.$store.state.cv
     },
 
-    linkList() {
+    linkList () {
       return this.$store.state.linkList
     }
   },

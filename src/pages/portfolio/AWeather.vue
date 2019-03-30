@@ -1,10 +1,11 @@
 <template lang="pug">
   div#page--aweather
-    | AWeather
+    //- ProjectInfo(v-if="this.$route.path !== '/'")
 </template>
 
 <script>
 import {globalVar} from '@/globalVar'
+// import ProjectInfo from '@/components/ProjectInfo'
 
 export default {
   name: 'aweather',
@@ -14,9 +15,18 @@ export default {
     titleTemplate: '%s - AWeather',
   },
 
+  computed: {
+    portfolioList () {
+      return this.$store.state.portfolioList
+    },
+  },
+
+  components: {
+    // ProjectInfo,
+  }
+
 }
 </script>
 
 <style lang="scss">
-
 </style>

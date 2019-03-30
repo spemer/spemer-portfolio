@@ -24,7 +24,7 @@ export default {
   name: 'articles',
 
   computed: {
-    articlesList() {
+    articlesList () {
       return this.$store.state.articlesList
     },
 

@@ -4,9 +4,12 @@
 </template>
 
 <script>
-
 export default {
   name: 'app',
+
+  updated() {
+    // console.info(this.$route.path)
+  },
 }
 </script>
 

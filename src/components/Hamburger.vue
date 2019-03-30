@@ -35,11 +35,11 @@ import {globalVar} from '@/globalVar'
 export default {
 
   computed: {
-    portfolioList() {
+    portfolioList () {
       return this.$store.state.portfolioList
     },
 
-    articlesList() {
+    articlesList () {
       return this.$store.state.articlesList
     },
   },

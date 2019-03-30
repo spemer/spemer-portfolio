@@ -9,11 +9,12 @@
       :to="'/'"
       v-tooltip.top="{content: 'Home', delay: {show: 500, hide: 100}}"
     ) Back to main page
-      //- v-if="this.$route.path === '/about'"
 </template>
 
 <script>
 export default {
+  name: 'topText',
+
   data () {
     return {
       thisUrl: window.location.href,
@@ -21,17 +22,6 @@ export default {
       back: undefined,
     }
   },
-
-  // methods: {
-  //   setNextText() {
-  //     for(var i = 0; i < portfolioList.length; i++) {
-  //       if(this.thisUrl.indexOf(portfolioList[i]) != 1) {
-  //         this.next == portfolioList.value[i + 1]
-  //         return this.next
-  //       }
-  //     }
-  //   },
-  // },
 
   computed: {
     portfolioList() {

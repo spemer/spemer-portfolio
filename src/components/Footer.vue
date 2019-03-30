@@ -32,7 +32,7 @@ export default {
   name: 'Footer',
 
   computed: {
-    snsIconList() {
+    snsIconList () {
       return this.$store.state.snsIconList
     }
   },
